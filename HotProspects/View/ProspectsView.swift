@@ -12,6 +12,8 @@ enum FilterType {
 }
 
 struct ProspectsView: View {
+    @EnvironmentObject var vm: ContentViewModel
+    
     var filter: FilterType
     
     var title: String {
@@ -26,8 +28,18 @@ struct ProspectsView: View {
     }
     var body: some View {
         NavigationView {
-            Text("Hello World!")
+            Text("People: \(vm.prospects.count)")
                 .navigationTitle(title)
+                .toolbar {
+                    Button {
+                        let prospect = Prospect()
+                        prospect.name = "Pago Patito"
+                        prospect.emailAddress = "pago@patito@gmai.com"
+                        vm.prospects.append(prospect)
+                    } label: {
+                        Label("Scan", systemImage: "qrcode.viewfinder")
+                    }
+                }
         }
     }
 }
