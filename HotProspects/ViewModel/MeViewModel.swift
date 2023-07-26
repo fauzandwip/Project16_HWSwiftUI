@@ -1,0 +1,29 @@
+//
+//  MeViewModel.swift
+//  HotProspects
+//
+//  Created by Fauzan Dwi Prasetyo on 26/07/23.
+//
+
+import CoreImage.CIFilterBuiltins
+import SwiftUI
+
+class MeViewModel: ObservableObject {
+    @Published var name = "Patito"
+    @Published var emailAddress = "patito@gmail.com"
+    
+    let context = CIContext()
+    var filter = CIFilter.qrCodeGenerator()
+    
+    func getQRCode(from inputString: String) -> UIImage {
+        filter.message = Data(inputString.utf8)
+
+        if let ouputImage = filter.outputImage {
+            if let cgImage = context.createCGImage(ouputImage, from: ouputImage.extent) {
+                return UIImage(cgImage: cgImage)
+            }
+        }
+
+        return UIImage(systemName: "xmark.circle") ?? UIImage()
+    }
+}

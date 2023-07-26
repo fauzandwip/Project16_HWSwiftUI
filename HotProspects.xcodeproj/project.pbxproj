@@ -25,6 +25,7 @@
 		7B1E8DF32A7111C90047C95F /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DF22A7111C90047C95F /* MeView.swift */; };
 		7B1E8DF52A7116920047C95F /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DF42A7116920047C95F /* Prospect.swift */; };
 		7B1E8DF92A7116CE0047C95F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DF82A7116CE0047C95F /* ContentViewModel.swift */; };
+		7B1E8DFC2A714EC90047C95F /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DFB2A714EC80047C95F /* MeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7B1E8DF22A7111C90047C95F /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		7B1E8DF42A7116920047C95F /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		7B1E8DF82A7116CE0047C95F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		7B1E8DFB2A714EC80047C95F /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				7B1E8DF82A7116CE0047C95F /* ContentViewModel.swift */,
+				7B1E8DFB2A714EC80047C95F /* MeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				7B1E8DE72A70E7C40047C95F /* swipeActionsView.swift in Sources */,
 				7B1E8DDD2A7009C00047C95F /* TabsView.swift in Sources */,
 				7B1E8DE52A70E4440047C95F /* contextMenuView.swift in Sources */,
+				7B1E8DFC2A714EC90047C95F /* MeViewModel.swift in Sources */,
 				7B1E8DDB2A7005C40047C95F /* EnvironmentObjectView.swift in Sources */,
 				7B1E8DE12A70DB910047C95F /* ResultView.swift in Sources */,
 				7B1E8DE92A70FC810047C95F /* LocalNotificationsView.swift in Sources */,
