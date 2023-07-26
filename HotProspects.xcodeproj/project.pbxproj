@@ -18,6 +18,7 @@
 		7B1E8DE32A70DEAA0047C95F /* InterpolationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE22A70DEAA0047C95F /* InterpolationView.swift */; };
 		7B1E8DE52A70E4440047C95F /* contextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE42A70E4440047C95F /* contextMenuView.swift */; };
 		7B1E8DE72A70E7C40047C95F /* swipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE62A70E7C40047C95F /* swipeActionsView.swift */; };
+		7B1E8DE92A70FC810047C95F /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE82A70FC810047C95F /* LocalNotificationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		7B1E8DE22A70DEAA0047C95F /* InterpolationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolationView.swift; sourceTree = "<group>"; };
 		7B1E8DE42A70E4440047C95F /* contextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contextMenuView.swift; sourceTree = "<group>"; };
 		7B1E8DE62A70E7C40047C95F /* swipeActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipeActionsView.swift; sourceTree = "<group>"; };
+		7B1E8DE82A70FC810047C95F /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				7B1E8DE22A70DEAA0047C95F /* InterpolationView.swift */,
 				7B1E8DE42A70E4440047C95F /* contextMenuView.swift */,
 				7B1E8DE62A70E7C40047C95F /* swipeActionsView.swift */,
+				7B1E8DE82A70FC810047C95F /* LocalNotificationsView.swift */,
 			);
 			path = Introduction;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				7B1E8DE52A70E4440047C95F /* contextMenuView.swift in Sources */,
 				7B1E8DDB2A7005C40047C95F /* EnvironmentObjectView.swift in Sources */,
 				7B1E8DE12A70DB910047C95F /* ResultView.swift in Sources */,
+				7B1E8DE92A70FC810047C95F /* LocalNotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
