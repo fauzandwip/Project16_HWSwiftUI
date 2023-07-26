@@ -26,20 +26,41 @@ struct ProspectsView: View {
             return "Uncontacted People"
         }
     }
+    
     var body: some View {
         NavigationView {
-            Text("People: \(vm.prospects.count)")
+            List {
+                ForEach(filteredProspects) { prospect in
+                    VStack(alignment: .leading) {
+                        Text(prospect.name)
+                            .font(.headline)
+                        Text(prospect.emailAddress)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
                 .navigationTitle(title)
                 .toolbar {
                     Button {
                         let prospect = Prospect()
                         prospect.name = "Pago Patito"
-                        prospect.emailAddress = "pago@patito@gmai.com"
+                        prospect.emailAddress = "pago@patito@gmail.com"
                         vm.prospects.append(prospect)
                     } label: {
                         Label("Scan", systemImage: "qrcode.viewfinder")
                     }
                 }
+        }
+    }
+    
+    var filteredProspects: [Prospect] {
+        switch filter {
+        case .none:
+            return vm.prospects
+        case .contacted:
+            return vm.prospects.filter { $0.isContacted }
+        case .uncontacted:
+            return vm.prospects.filter { !$0.isContacted }
         }
     }
 }
