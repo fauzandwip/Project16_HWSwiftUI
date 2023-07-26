@@ -19,6 +19,8 @@
 		7B1E8DE52A70E4440047C95F /* contextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE42A70E4440047C95F /* contextMenuView.swift */; };
 		7B1E8DE72A70E7C40047C95F /* swipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE62A70E7C40047C95F /* swipeActionsView.swift */; };
 		7B1E8DE92A70FC810047C95F /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE82A70FC810047C95F /* LocalNotificationsView.swift */; };
+		7B1E8DEB2A71068C0047C95F /* DepedenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DEA2A71068C0047C95F /* DepedenciesView.swift */; };
+		7B1E8DEE2A7106DE0047C95F /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 7B1E8DED2A7106DE0047C95F /* SamplePackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		7B1E8DE42A70E4440047C95F /* contextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contextMenuView.swift; sourceTree = "<group>"; };
 		7B1E8DE62A70E7C40047C95F /* swipeActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipeActionsView.swift; sourceTree = "<group>"; };
 		7B1E8DE82A70FC810047C95F /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
+		7B1E8DEA2A71068C0047C95F /* DepedenciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepedenciesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B1E8DEE2A7106DE0047C95F /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +99,7 @@
 				7B1E8DE42A70E4440047C95F /* contextMenuView.swift */,
 				7B1E8DE62A70E7C40047C95F /* swipeActionsView.swift */,
 				7B1E8DE82A70FC810047C95F /* LocalNotificationsView.swift */,
+				7B1E8DEA2A71068C0047C95F /* DepedenciesView.swift */,
 			);
 			path = Introduction;
 			sourceTree = "<group>";
@@ -115,6 +120,9 @@
 			dependencies = (
 			);
 			name = HotProspects;
+			packageProductDependencies = (
+				7B1E8DED2A7106DE0047C95F /* SamplePackage */,
+			);
 			productName = HotProspects;
 			productReference = 7B1E8DC82A6FE9F10047C95F /* HotProspects.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 7B1E8DBF2A6FE9F10047C95F;
+			packageReferences = (
+				7B1E8DEC2A7106DE0047C95F /* XCRemoteSwiftPackageReference "SamplePackage" */,
+			);
 			productRefGroup = 7B1E8DC92A6FE9F10047C95F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B1E8DEB2A71068C0047C95F /* DepedenciesView.swift in Sources */,
 				7B1E8DCE2A6FE9F10047C95F /* ContentView.swift in Sources */,
 				7B1E8DE32A70DEAA0047C95F /* InterpolationView.swift in Sources */,
 				7B1E8DCC2A6FE9F10047C95F /* HotProspectsApp.swift in Sources */,
@@ -379,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B1E8DEC2A7106DE0047C95F /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B1E8DED2A7106DE0047C95F /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B1E8DEC2A7106DE0047C95F /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B1E8DC02A6FE9F10047C95F /* Project object */;
 }
