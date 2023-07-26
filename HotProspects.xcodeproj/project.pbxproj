@@ -16,6 +16,7 @@
 		7B1E8DDF2A70D7080047C95F /* objectWillChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DDE2A70D7080047C95F /* objectWillChangeView.swift */; };
 		7B1E8DE12A70DB910047C95F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE02A70DB910047C95F /* ResultView.swift */; };
 		7B1E8DE32A70DEAA0047C95F /* InterpolationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE22A70DEAA0047C95F /* InterpolationView.swift */; };
+		7B1E8DE52A70E4440047C95F /* contextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DE42A70E4440047C95F /* contextMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7B1E8DDE2A70D7080047C95F /* objectWillChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objectWillChangeView.swift; sourceTree = "<group>"; };
 		7B1E8DE02A70DB910047C95F /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		7B1E8DE22A70DEAA0047C95F /* InterpolationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolationView.swift; sourceTree = "<group>"; };
+		7B1E8DE42A70E4440047C95F /* contextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contextMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				7B1E8DDE2A70D7080047C95F /* objectWillChangeView.swift */,
 				7B1E8DE02A70DB910047C95F /* ResultView.swift */,
 				7B1E8DE22A70DEAA0047C95F /* InterpolationView.swift */,
+				7B1E8DE42A70E4440047C95F /* contextMenuView.swift */,
 			);
 			path = Introduction;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				7B1E8DCC2A6FE9F10047C95F /* HotProspectsApp.swift in Sources */,
 				7B1E8DDF2A70D7080047C95F /* objectWillChangeView.swift in Sources */,
 				7B1E8DDD2A7009C00047C95F /* TabsView.swift in Sources */,
+				7B1E8DE52A70E4440047C95F /* contextMenuView.swift in Sources */,
 				7B1E8DDB2A7005C40047C95F /* EnvironmentObjectView.swift in Sources */,
 				7B1E8DE12A70DB910047C95F /* ResultView.swift in Sources */,
 			);
