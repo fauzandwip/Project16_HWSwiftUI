@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var vm = ContentViewModel()
+    @StateObject var vm = ProspectsViewModel()
     
     var body: some View {
         TabView {
