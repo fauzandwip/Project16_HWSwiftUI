@@ -26,6 +26,7 @@
 		7B1E8DF92A7116CE0047C95F /* ProspectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DF82A7116CE0047C95F /* ProspectsViewModel.swift */; };
 		7B1E8DFC2A714EC90047C95F /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8DFB2A714EC80047C95F /* MeViewModel.swift */; };
 		7B1E8DFF2A7169230047C95F /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 7B1E8DFE2A7169230047C95F /* CodeScanner */; };
+		7B1E8E012A722FCF0047C95F /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E8E002A722FCF0047C95F /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		7B1E8DF22A7111C90047C95F /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		7B1E8DF82A7116CE0047C95F /* ProspectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsViewModel.swift; sourceTree = "<group>"; };
 		7B1E8DFB2A714EC80047C95F /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
+		7B1E8E002A722FCF0047C95F /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				7B1E8DCB2A6FE9F10047C95F /* HotProspectsApp.swift */,
+				7B1E8E002A722FCF0047C95F /* ImageSaver.swift */,
 				7B1E8DEF2A7111AA0047C95F /* View */,
 				7B1E8DFA2A7116D20047C95F /* ViewModel */,
 				7B1E8DD92A7005AD0047C95F /* Introduction */,
@@ -227,6 +230,7 @@
 				7B1E8DE92A70FC810047C95F /* LocalNotificationsView.swift in Sources */,
 				7B1E8DF32A7111C90047C95F /* MeView.swift in Sources */,
 				7B1E8DF92A7116CE0047C95F /* ProspectsViewModel.swift in Sources */,
+				7B1E8E012A722FCF0047C95F /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +363,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need to save QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -389,6 +394,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need to save QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

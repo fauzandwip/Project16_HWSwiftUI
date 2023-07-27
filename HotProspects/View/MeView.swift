@@ -23,12 +23,22 @@ struct MeView: View {
                         .font(.title)
                 }
                 
-                    Image(uiImage: vm.getQRCode(from: "\(vm.name)\n\(vm.emailAddress)"))
-                        .resizable()
-                        .interpolation(.none)
-                        .scaledToFit()
+                Image(uiImage: vm.qrCode)
+                    .resizable()
+                    .interpolation(.none)
+                    .scaledToFit()
+                    .contextMenu {
+                        Button {
+                            ImageSaver().writeToPhotoAlbum(image: vm.qrCode)
+                        } label: {
+                            Label("Save to Photos", systemImage: "square.and.arrow.down")
+                        }
+                    }
             }
             .navigationTitle("Your QR Code")
+            .onAppear(perform: vm.updateQRCode)
+            .onChange(of: vm.name) { _ in vm.updateQRCode() }
+            .onChange(of: vm.emailAddress) { _ in vm.updateQRCode() }
         }
     }
 }
