@@ -49,6 +49,7 @@
 		7B1E8DF82A7116CE0047C95F /* ProspectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsViewModel.swift; sourceTree = "<group>"; };
 		7B1E8DFB2A714EC80047C95F /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
 		7B1E8E002A722FCF0047C95F /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		7B1E8E022A723D7D0047C95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		7B1E8DCA2A6FE9F10047C95F /* HotProspects */ = {
 			isa = PBXGroup;
 			children = (
+				7B1E8E022A723D7D0047C95F /* Info.plist */,
 				7B1E8DCB2A6FE9F10047C95F /* HotProspectsApp.swift */,
 				7B1E8E002A722FCF0047C95F /* ImageSaver.swift */,
 				7B1E8DEF2A7111AA0047C95F /* View */,
@@ -362,6 +364,7 @@
 				DEVELOPMENT_TEAM = B9S7PB8R45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotProspects/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need to save QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -393,6 +396,7 @@
 				DEVELOPMENT_TEAM = B9S7PB8R45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotProspects/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need to save QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -64,6 +64,13 @@ struct ProspectsView: View {
                                 Label("Mark Contacted", systemImage: "person.crop.circle.fill.badge.checkmark")
                             }
                             .tint(.green)
+                            
+                            Button {
+                                vm.addNotification(for: prospect)
+                            } label: {
+                                Label("Remind Me", systemImage: "bell")
+                            }
+                            .tint(.orange)
                         }
                     }
                 }
