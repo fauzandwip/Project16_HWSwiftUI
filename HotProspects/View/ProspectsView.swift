@@ -126,8 +126,8 @@ struct ProspectsView: View {
             }
             // MARK: - Challenge 3
             .confirmationDialog("Sort by", isPresented: $vm.isShowingSort) {
-                Button("Name") { vm.filterSort = .name }
-                Button("Recent") { vm.filterSort = .recent }
+                Button("Name" + (vm.filterSort == .name ? " ✓" : "")) { vm.filterSort = .name }
+                Button("Recent" + (vm.filterSort == .recent ? " ✓" : "")) { vm.filterSort = .recent }
             }
         }
     }
