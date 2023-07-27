@@ -12,6 +12,11 @@ enum FilterType {
     case none, contacted, uncontacted
 }
 
+// MARK: - Challenge 3
+enum FilterSort {
+    case name, recent
+}
+
 struct ProspectsView: View {
     @EnvironmentObject var vm: ProspectsViewModel
     
@@ -39,10 +44,21 @@ struct ProspectsView: View {
         }
     }
     
+    // MARK: - Challenge 3
+    var filteredProspectsSorted: [Prospect] {
+        switch vm.filterSort {
+        case .name:
+            return filteredProspects.sorted { $0.name < $1.name }
+        case .recent:
+            return filteredProspects.sorted { $0.date > $1.date }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(filteredProspects) { prospect in
+                // MARK: - Challenge 3
+                ForEach(filteredProspectsSorted) { prospect in
                     HStack {
                         // MARK: - Challenge 1
                         if filter == .none {
@@ -85,16 +101,32 @@ struct ProspectsView: View {
             }
             .navigationTitle(title)
             .toolbar {
-                Button {
-                    vm.isShowingScanner = true
-                } label: {
-                    Label("Scan", systemImage: "qrcode.viewfinder")
+                // MARK: - Challenge 3
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        vm.isShowingSort = true
+                    } label: {
+                        Label("Sort", systemImage: "arrow.up.arrow.down")
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        vm.isShowingScanner = true
+                    } label: {
+                        Label("Scan", systemImage: "qrcode.viewfinder")
+                    }
                 }
             }
             .sheet(isPresented: $vm.isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Patito\npatito@gmail.com") {
+                CodeScannerView(codeTypes: [.qr], simulatedData: vm.dummyData.randomElement()!) {
                     vm.handleScan(result: $0)
                 }
+            }
+            // MARK: - Challenge 3
+            .confirmationDialog("Sort by", isPresented: $vm.isShowingSort) {
+                Button("Name") { vm.filterSort = .name }
+                Button("Recent") { vm.filterSort = .recent }
             }
         }
     }
