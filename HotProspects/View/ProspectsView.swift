@@ -56,7 +56,7 @@ struct ProspectsView: View {
                             } label: {
                                 Label("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark")
                             }
-                            .tint(.red)
+                            .tint(.blue)
                         } else {
                             Button {
                                 vm.toggle(prospect)

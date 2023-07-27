@@ -19,8 +19,23 @@ class Prospect: Identifiable, Codable {
     @Published var prospects: [Prospect]
     @Published var isShowingScanner = false
     
+    let saveKey = "SaveData"
+    
     init() {
+        if let data = UserDefaults.standard.data(forKey: saveKey) {
+            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
+                prospects = decoded
+                return
+            }
+        }
+        
         prospects = []
+    }
+    
+    func save() {
+        if let encoded = try? JSONEncoder().encode(prospects) {
+            UserDefaults.standard.set(encoded, forKey: saveKey)
+        }
     }
     
     func handleScan(result: Result<ScanResult, ScanError>) {
@@ -35,6 +50,7 @@ class Prospect: Identifiable, Codable {
             prospect.name = details[0]
             prospect.emailAddress = details[1]
             prospects.append(prospect)
+            save()
         case .failure(let error):
             print("Scanning failed: \(error.localizedDescription)")
         }
@@ -43,5 +59,6 @@ class Prospect: Identifiable, Codable {
     func toggle(_ prospect: Prospect) {
         objectWillChange.send()
         prospect.isContacted.toggle()
+        save()
     }
 }
