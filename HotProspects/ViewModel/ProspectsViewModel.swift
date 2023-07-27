@@ -21,9 +21,15 @@ class Prospect: Identifiable, Codable {
     @Published var isShowingScanner = false
     
     let saveKey = "SaveData"
+    // MARK: - Challenge 2
+    let url = FileManager.documentDirectory.appendingPathComponent("SaveData.json")
     
     init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey) {
+        // User Defaults
+        // if let data = UserDefaults.standard.data(forKey: saveKey) {
+        
+        // MARK: - Challenge 2
+        if let data = try? Data(contentsOf: url) {
             if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
                 prospects = decoded
                 return
@@ -35,7 +41,16 @@ class Prospect: Identifiable, Codable {
     
     func save() {
         if let encoded = try? JSONEncoder().encode(prospects) {
-            UserDefaults.standard.set(encoded, forKey: saveKey)
+            // User Defaults
+            // UserDefaults.standard.set(encoded, forKey: saveKey)
+            
+            // MARK: - Challenge 2
+            // File Directory
+            do {
+                try encoded.write(to: url)
+            } catch {
+                print("Failed while save data to directory: \(error.localizedDescription)")
+            }
         }
     }
     
