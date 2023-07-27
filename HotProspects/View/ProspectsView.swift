@@ -71,6 +71,7 @@ struct ProspectsView: View {
                                 .font(.headline)
                             Text(prospect.emailAddress)
                                 .foregroundColor(.secondary)
+                                .lineLimit(1)
                         }
                     }
                     .swipeActions {
